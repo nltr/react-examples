@@ -2,15 +2,19 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0,
-    src: "https://picsum.photos/10"
+    count: 0
+  };
+  styles = {
+    fontSize: "50px",
+    fontWeight: "bold"
   };
   render() {
     return (
       <React.Fragment>
-        <img src={this.state.src} alt=""></img>
-        <span>{this.formatCounter()}</span>
-        <button>Increment</button>
+        <span className="badge badge-primary m-2" style={this.styles}>
+          {this.formatCounter()}
+        </span>
+        <button className="btn btn-secondary btn-sm">Increment</button>
       </React.Fragment>
     );
   }
